@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siri IA</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1 id="app-title">Siri IA</h1>
+        <button id="clear-btn" class="clear-btn">Limpar Histórico</button>
+      </header>
+
+      <div class="chat-container">
+        <div id="messages" class="messages">
+          <!-- Messages will be inserted here -->
+        </div>
+
+        <div class="input-container">
+          <div id="image-preview" class="image-preview" style="display: none;">
+            <img id="preview-img" src="" alt="Preview" />
+            <button id="remove-image" class="remove-image">×</button>
+          </div>
+          
+          <div class="input-wrapper">
+            <input type="file" id="file-input" accept="image/*" style="display: none;" />
+            
+            <button id="attach-btn" class="attach-btn" title="Anexar imagem">📎</button>
+            
+            <textarea
+              id="message-input"
+              placeholder="Digite sua mensagem..."
+              class="message-input"
+              rows="1"
+            ></textarea>
+            
+            <button id="send-btn" class="send-btn" disabled>➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="groq.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
